@@ -1,0 +1,33 @@
+$ su //수퍼바이저
+$ useradd 사용자이름 //사용자 추가
+$su 사용자이름 //사용자 들어감
+exit //나감
+
+$ userdel -r 사용자이름 //완전히 지움
+
+//그룹 만들기
+
+# groupadd cs19
+# groupdel cs19
+
+//useradd의 다양한 사용법
+
+$ useradd -c 코멘트 -d 디렉터리 (홈디렉터리 위치) -e 날짜 (유효기간) -s 쉘 (로그인쉘 경로) -u uid 사용자번호 -g 그룹 (속하는 그룹) 사용자이름
+
+//기존에 생성된 그룹이 있어야 user에 그룹을 설정할 수 있음
+
+
+cd / 루트 디렉터리
+cd ~ 홈 디렉터리
+
+
+//생성된 그룹 생성
+cd /
+cd etc //etc에 들어감
+cat group //모든 그룹을 모아서 보여줌
+
+
+//etc의 shadow파일, etc의 passwd파일에서 새로 생성된 사용자, 그룹 확인
+cd /
+cd etc
+cat shadow
